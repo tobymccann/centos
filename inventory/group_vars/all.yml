@@ -1,0 +1,15 @@
+---
+users:
+  - username: jkennemer
+    name: Jason Kennemer
+    groups: ['wheel','systemd-journal']
+    uid: 1010
+    profile: |
+      alias ll='ls -lah'
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJsHCsS9SRqnGB8O658dfM863tM7GAeKnhBecwAvUaucUO5rczaWESxp88tjdj940OQDRtILiEARlI40xdL/w/+wwsKhUr6aMTftY0oxIinfMRsuDjosQB4K4UolI+o8mI1K/pEDRmRbLF0qan6VHhTw8pxyVf+ToqaIAhq8tCgBWu2VbyXiUOlg6O8YWhkC1RjwnQHbG89LGHbK+erBVuaNoNjTuZJE3puSY4oyLPZ71sucITR/liFhdFvdd5y7MbvTLCFypoQz12bYjqouuRFtMUOnl9wzdC3WkdMy3KevvAjtXOJiBjvFewuiowfyXiO/RfT3AciEngEzvDizWj jkennemer@Longhorn"
+groups_to_create:
+  - name: developers
+    gid: 10000
+  - name: docker_users
+    gid: 10101

@@ -1,0 +1,28 @@
+---
+- hosts: lxchosts
+  gather_facts: true
+  become: yes
+  become_method: su
+
+  roles:
+    - { role: 'common', tags: 'common' }
+    - { role: 'mivok0.users', tags: 'users' }
+    - { role: 'geerlingguy.repo-epel', tags: 'repo-epel' }
+    - { role: 'geerlingguy.ntp', tags: 'ntp' }
+    - { role: 'andrewrothstein.python', tags: 'python' }
+    - role: 'gantsign.oh-my-zsh'
+      tags: 'oh-my-zsh'
+      users:
+        - username: jkennemer
+          oh_my_zsh:
+            theme: agnoster
+            plugins:
+              - git
+              - docker
+              - python
+              - pip
+    - { role: 'geerlingguy.filebeat', tags: 'filebeat' }
+    - { role: 'nickhammond.logrotate', tags: 'logrotate' }
+    - { role: 'jgeusebroek.docker', tags: 'docker' }
+    - { role: 'geerlingguy.firewall', tags: 'firewall' }
+    - { role: 'geerlingguy.security', tags: 'security' }

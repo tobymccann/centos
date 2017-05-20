@@ -1,0 +1,13 @@
+# intall_roles.yml
+
+# from galaxy
+- src: mivok0.users
+- src: nickhammond.logrotate
+- src: geerlingguy.repo-epel
+- src: gantsign.oh-my-zsh
+- src: andrewrothstein.python
+- src: jgeusebroek.docker
+- src: geerlingguy.filebeat
+- src: geerlingguy.firewall
+- src: geerlingguy.ntp
+- src: geerlingguy.security
